@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculate Area of Square</title>
+    <script>
+        function calculateArea() {
+            var sideLength = document.getElementById("sideLength").value;
+            if (sideLength) {
+                var area = sideLength * sideLength;
+
+                document.getElementById("result").innerHTML = "Area of the square: " + area;
+            } else {
+                document.getElementById("result").innerHTML = "Please enter a valid number for the side length.";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Calculate Square Area</h2>
+    <p>Enter the length of one side of the square:</p>
+    <input type="text" id="sideLength">
+    <button onclick="calculateArea()">Calculate</button>
+    <p id="result"></p>
+</body>
+
+</html>

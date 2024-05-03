@@ -1,0 +1,24 @@
+<script>
+function CompoundInterest(principal, rate, time, frequency) {
+    let n = frequency;
+    let r = rate / 100;
+    let t = time;
+
+    let amount = principal * Math.pow((1 + r / n), (n * t));
+    let compoundInterest = amount - principal;
+    return compoundInterest;
+}
+
+let principal = parseFloat(prompt("Enter the principal amount:"));
+let rate = parseFloat(prompt("Enter the annual interest rate:"));
+let time = parseFloat(prompt("Enter the time period:"));
+let frequency = parseFloat(prompt("Enter the frequency of compounding per year:"));
+
+if (principal && rate && time && frequency && frequency > 0) {
+    let interest = CompoundInterest(principal, rate, time, frequency);
+    document.write("Compound Interest:", interest.toFixed(2));
+} else {
+    document.write("Invalid input. Please enter valid numbers.");
+}
+
+</script>

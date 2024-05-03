@@ -1,0 +1,17 @@
+<script>
+    function SimpleInterest(principal, rate, time) {
+        return (principal * rate * time) / 100;
+    }
+
+    let principal = parseFloat(prompt("Enter the principal amount:"));
+    let rate = parseFloat(prompt("Enter the annual interest rate:"));
+    let time = parseFloat(prompt("Enter the time period:"));
+
+    if (principal && rate && time) {
+        let interest = SimpleInterest(principal, rate, time);
+        document.write("Simple Interest:", interest);
+    } else {
+        document.write("Invalid input. Please enter valid numbers.");
+    }
+
+</script>
