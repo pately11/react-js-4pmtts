@@ -1,0 +1,16 @@
+<script>
+     function LeapYear(year) {
+        return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+
+        }
+        const year = prompt("Enter a year:");
+            if (year !== null) {
+                const yearNumber = parseInt(year, 10);
+                    if (LeapYear(yearNumber)) {
+                        alert(yearNumber + " is a leap year.");
+                    } else {
+                        alert(yearNumber + " is not a leap year.");
+                    }
+            }
+
+</script>
