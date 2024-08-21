@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que-6</title>
+</head>
+
+<body>
+    <h2>Que-6 What is Header and Content Components in React Js?</h2>
+    <hr>
+    <p>In React.js, Header and Content components are typically custom components that you define to represent specific
+        parts of the user interface. These components help you structure the UI in a modular and organized way. Here’s
+        an explanation of each:</p>
+    <h3>1. Header Component</h3>
+    <p>The Header component is usually responsible for rendering the top part of a webpage or application. This area
+        often includes elements like the logo, navigation menu, search bar, user profile links, and other common
+        elements that are found at the top of a page.</p>
+    <h4>Example:</h4>
+    <pre>
+import React from 'react';
+
+function Header() {
+  return (
+    &lt;header&gt;
+    &lt;div className="logo"MyApp&gt;&lt;/div&gt;
+       &lt;nav&gt;
+        &lt;ul&gt;
+           &lt;li&gt;&lt;a href="#home"&gt;Home &lt;/a&gt; &lt;/li&gt;
+           &lt;li&gt;&lt;a href="#about"&gt;About &lt;/a&gt; &lt;/li&gt;
+           &lt;li&gt;&lt;a href="#contact"&gt;Contact &lt;/a&gt; &lt;/li&gt;
+         &lt;/ul&gt;
+       &lt;/nav&gt;
+    </header>
+  );
+}
+
+export default Header;
+
+    </pre>
+    <h3>Features of the Header Component:</h3>
+    <li><strong>Reusable:</strong>ou can use the Header component on multiple pages or screens within your application.</li>
+    <li><strong>Customization: </strong>The Header component can be customized with different props, such as dynamically changing the links or the title based on the current page.</li>
+    <li><strong>Static or Dynamic:</strong>The content inside the Header component can be static (hardcoded) or dynamic (based on props or state).</li>
+    <h3>2. Content Component</h3>
+    <p>The Content component is responsible for rendering the main content area of the webpage or application. This could include text, images, forms, articles, or any other elements that make up the primary part of the page.</p>
+    <h4>Example:</h4>
+    <pre>
+import React from 'react';
+
+function Content() {
+  return (
+     &lt;main&gt;
+       &lt;h1&gt;Welcome to MyApp &lt;/h1&gt;
+       &lt;p&gt;This is the main content area where you can display articles, products, or any other information relevant to the page. &lt;/p&gt;
+     &lt;/main&gt;
+  );
+}
+
+export default Content;
+
+    </pre>
+    <h3>Features of the Content Component:</h3>
+    <li><strong>Central Area: </strong>The Content component usually occupies the main area of the page layout, often between the Header and Footer.</li>
+    <li><strong>Flexible:</strong>This component can be tailored to display different content depending on the page or user interaction.</li>
+    <li><strong>Reusable:</strong>Like the Header, the Content component can be reused across different parts of the application, with varying content depending on the page.</li>
+</body>
+
+</html>
