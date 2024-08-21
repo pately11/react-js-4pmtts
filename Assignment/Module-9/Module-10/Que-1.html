@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que-1</title>
+</head>
+<body>
+    <h2>Que-1 Explain Life cycle in Class Component and functional component with Hooks</h2>
+    <hr>
+    <p>In React, the component lifecycle defines the series of methods or phases that a component goes through from its creation to its removal from the DOM. This lifecycle is slightly different for class components and functional components with hooks.</p>
+    <h2>Class Components</h2>
+    <p>In class components, the lifecycle methods are used to perform operations at specific points in a component’s life. Here's a breakdown of key lifecycle methods:</p>
+    <h3>Mounting:</h3>
+    <p>When a component is being created and inserted into the DOM.</p>
+    <li><strong>constructor():</strong>Initializes state and binds methods.</li>
+    <li><strong>static getDerivedStateFromProps(props, state):</strong>Updates state based on props before rendering.</li>
+    <li><strong>render():</strong>Renders the component UI.</li>
+    <li><strong>componentDidMount():</strong> Called after the component is mounted. Ideal for side effects like fetching data.</li>
+    <h3>Updating:</h3>
+    <p>When a component is being re-rendered due to changes in props or state.</p>
+    <li><strong>static getDerivedStateFromProps(props, state):</strong>Same as during mounting, but called before every render.</li>
+    <li><strong>shouldComponentUpdate(nextProps, nextState):</strong> Determines if a re-render is necessary (optimizing performance).</li>
+    <li><strong>render():</strong>Renders the component UI.</li>
+    <li><strong>getSnapshotBeforeUpdate(prevProps, prevState):</strong>Captures some information from the DOM before it is potentially changed.</li>
+    <li><strong>componentDidUpdate(prevProps, prevState, snapshot):</strong>Called after the component updates. Ideal for operations like DOM manipulations.</li>
+    <h3>Unmounting:</h3>
+    <p>When a component is being removed from the DOM.</p>
+    <li><strong>componentWillUnmount():</strong>Used for cleanup activities like invalidating timers or canceling network requests.</li>
+    <h3>Error Handling:</h3>
+    <p>When an error occurs during rendering.</p>
+    <li><strong>componentDidCatch(error, info):</strong>Catches errors in the component tree and allows logging or displaying fallback UI.</li>
+    <h2>Functional Components with Hooks</h2>
+    <p>Functional components with hooks simplify lifecycle management. The useEffect hook is the primary tool for managing side effects, and it replaces several lifecycle methods from class components.</p>
+    <h3>Mounting and Updating:</h3>
+    <li><strong>useEffect(() => { ... }, [dependencies]):</strong>Runs after every render if the dependencies array changes. If no dependencies are provided, it runs once after the initial render, mimicking componentDidMount. To mimic componentDidUpdate, include specific dependencies in the array.</li>
+    <h3>Unmounting:</h3>
+    <li>The return function inside useEffect is used for cleanup, similar to componentWillUnmount.</li>
+    <h3>Error Handling:</h3>
+    <li>Error boundaries are not directly supported by hooks. To handle errors, use class components or custom error boundary components.</li>
+    <h3>Example:</h3>
+    <pre>
+        useEffect(() => {
+            // Side effect logic here
+            return () => {
+              // Cleanup logic here (mimics componentWillUnmount)
+            };
+          }, [dependencies]);
+          
+    </pre>
+</body>
+</html>
